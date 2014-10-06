@@ -1,6 +1,6 @@
-FROM ubuntu:13.10
+FROM jpetazzo/dind
 
-MAINTAINER Drone.io Team
+MAINTAINER Andrew Fecheyr <andrew@bedesign.be>
 
 RUN apt-get update
 RUN apt-get install -y wget gcc make g++ build-essential ca-certificates mercurial git bzr libsqlite3-dev sqlite3
@@ -24,6 +24,6 @@ RUN make install
 
 EXPOSE 80
 
-ENTRYPOINT ["/usr/local/bin/droned"]
+ADD start.sh .
+CMD sh start.sh
 
-CMD ["--port=:80", "--datasource=/var/lib/drone/drone.sqlite"]

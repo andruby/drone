@@ -1,3 +1,13 @@
+## Docker
+
+This repository contains an alternative Dockerfile that builds upon [jpetazzo/dind](https://registry.hub.docker.com/u/jpetazzo/dind/)
+
+You can run it with:
+
+  docker run -p 8080:80 --privileged andruby/drone
+
+### Drone
+
 Drone is a [Continuous Integration](http://en.wikipedia.org/wiki/Continuous_integration) platform built on [Docker](https://www.docker.io/)
 
 [![Build Status](http://test.drone.io/v1/badge/github.com/drone/drone/status.svg?branch=master)](http://test.drone.io/github.com/drone/drone)
